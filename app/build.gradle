@@ -54,6 +54,16 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:11.6.2'
     implementation 'com.google.firebase:firebase-messaging:11.6.2'
 }
-
-
+apply plugin: "org.sonarqube"
+sonarqube {
+    properties {
+        property "sonar.projectName", "MyProject"
+        property "sonar.projectKey", "com.example.myproject"
+        property "sonar.host.url", "http://192.114.1.1:9000"
+        property "sonar.language", "java"
+        property "sonar.sources", "src/main/"
+        property "sonar.login", "username"
+        property "sonar.password", "password"
+    }
+}
 apply plugin: 'com.google.gms.google-services'

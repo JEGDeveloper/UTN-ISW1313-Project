@@ -5,12 +5,17 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.1'
 
         classpath 'com.google.gms:google-services:3.1.2'
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.5"
+
     }
 }
 
